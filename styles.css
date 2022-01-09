@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://d2ivesio5kogrp.cloudfront.net/static/yuppedu/images/fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('https://d2ivesio5kogrp.cloudfront.net/static/yuppedu/images/fonts/Montserrat-Regular.woff') format('woff'),
+    url('https://d2ivesio5kogrp.cloudfront.net/static/yuppedu/images/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    /* font-display: swap; */
+   }
+   *{font-family: 'Montserrat'; }
+body{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+71,0e0e0e+71 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4c1e9a+0,5b2ad8+100,9a7ee8+100 */
+background: #4c1e9a; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c1e9a 0%, #5b2ad8 100%, #9a7ee8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #4c1e9a 0%,#5b2ad8 100%,#9a7ee8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #4c1e9a 0%,#5b2ad8 100%,#9a7ee8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c1e9a', endColorstr='#9a7ee8',GradientType=0 ); /* IE6-9 */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+  height: auto; overflow-y: auto;min-height: 92vh; width: 100%;
+}
+#main{ color:#fff;border-radius: 10px; padding:10vh 15%; }
+#main.hide{display: none;}
+#demo{ color:#fff; text-align: center; font-size: 24px;margin-top:50px; font-weight: 600;}
+.tempDetails{display: flex; max-width: fit-content; align-items: center;}
+.temperature .temp{font-size: 120px;position: relative;line-height: 1; font-weight: 500; max-width: fit-content;}
+.temperature .temp:after{position: absolute; content: '°'; top:6px; right: -12; font-size: 80px; font-weight: 600;}
+.temperature .cel, .temperature .desc{font-size: 26px; text-align: left;opacity: 0.8;font-weight: 600; }
+.temperature .desc::first-letter{text-transform: capitalize;}
+.date, .avgTemp{font-size: 24px; opacity: 0.8;margin-bottom: 20px;margin-left:10px;}
+.avgTemp{margin-left: 15px;}
+.city{font-size: 55px; font-weight: bold;margin-bottom: 5px;}
+.imgBg{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,1770ed+100,000000+100,131313+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(23,112,237,1) 100%, rgba(0,0,0,1) 100%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(23,112,237,1) 100%,rgba(0,0,0,1) 100%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(23,112,237,1) 100%,rgba(0,0,0,1) 100%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border-radius: 50%; margin-right: 15px;}
+.imgBg .icon{width: 160px;}
+.WeatherDetails{padding-top: 20px; padding-bottom: 0px; position: relative;}
+.WeatherDetails::before {    position: absolute; content: ''; left: 15px; top: 10%; background: rgba(0,0,0,0.1); width: 1px; height: 80%; border-radius: 5px;}
+.WeatherDetails .value{font-size: 40px;line-height: 1; font-weight: bold; text-align: center;}
+.WeatherDetails .text{ font-size: 24px; opacity: 0.65; text-align: center;margin-bottom: 20px;}
+table{overflow: auto; max-width: 100%;border-collapse: inherit;}
+table td{font-size: 30px; line-height: 1.25; font-weight: 600; text-align: center;padding:10px 15px; background:rgba(0,0,0,0.1)}
+table td img{max-width: 100px;}
+table td span{font-size: 26px; margin-left: 2px;}
+.tableParent{overflow-x: auto; background: rgba(255,255,255,0.1); padding: 0;margin-top: 50px;position: relative;z-index: 1;}
+.tableParent::-webkit-scrollbar {  height: 8px; border-radius: 4px; z-index: 2; background: rgba(255,255,255,0.2);}
+.tableParent::-webkit-scrollbar-thumb { border-radius: 4px; background: rgba(0,0,0,.2); box-shadow: 0 0 1px rgba(255,255,255,.5); }
+  
+.searchBlock{background:rgba(239,239,239,1);    max-width: fit-content;
+    margin-left: auto;border:2px solid rgba(239,239,239,1); margin-top: 15px; padding:5px 0 5px 10px; border-radius: 6px; height: 58px;}
+.searchBlock.error{border:2px solid red}
+.searchBlock .searchBar{background:rgba(239,239,239,1); border:none;width:calc(100% - 58px); font-size: 26px; }
+.searchBlock .searchBar:focus, .searchBlock .searchBar:hover, .searchBlock .searchBar:focus-visible{outline: none;}
+.searchBlock input::placeholder {color: #000;opacity: 0.65; font-weight: 500;}
+.searchBtn{-webkit-appearance: none; border:none; outline: none !important;}
+.searchBlock .searchBtn{cursor: pointer;}
+.searchBlock .searchBtn img{width: 36px;}
+.searchBlock .errorMsg{color:red; margin-top: 5px; font-size: 14px; font-weight: 600;}
+.searchBlock .errorMsg::first-letter{text-transform: uppercase;}
+
+
+@media (max-width:1440px){
+    table td{font-size: 18px;padding:5px 8px;}
+    table td img{max-width: 60px;}
+    table td span{font-size: 16px; margin-left: 2px;}
+    #main{  padding:5vh 10%; }
+    .imgBg .icon{width: 120px;}
+    .city{font-size: 45px;}
+    .date, .WeatherDetails .text{ font-size: 20px;}
+    .WeatherDetails .value{font-size: 28px;}
+    .temperature .desc{font-size: 22px;}
+    .temperature .temp{font-size: 80px;}
+    .temperature .temp::after{font-size: 60px;}
+    .searchBlock{height: 40px;}
+    .searchBlock .searchBar{font-size: 18px; width: calc(100% - 40px);}
+    .searchBlock .searchBtn img{width: 20px;}
+}
+
+@media(max-width:1199px){
+ table td{font-size: 16px;}
+ table td img{max-width: 20px;}
+ #demo{font-size: 20px;}
+ .imgBg .icon{width: 100px;}
+ table td img{max-width: 30px;}
+ table td span{font-size: 14px; margin-left: 2px;}
+}
+@media(max-width:767px){
+    
+    .searchBlock{ margin-top: 0; margin-bottom: 30px;}
+    .moveTOp{order:-1;}
+    #main{padding:2vh 15px;}
+    .city{text-align: center;}
+    .date{text-align: center;margin-left: 0;}
+    body{padding-bottom: 30px; }
+    .WeatherDetails .value{font-size: 20px;}
+    .WeatherDetails .text{font-size: 14px;}
+    .city{font-size: 34px;}
+    .date{font-size: 16px;}
+    .temp{font-size: 45px;}
+    .temperature .temp::after{font-size: 35px;}
+    .desc{font-size: 14px; font-weight: 600;}
+    .WeatherDetails{padding-top: 20px;margin-top: 20px;}
+    .tableParent{margin-top: 00px;}
+    .WeatherDetails::before{top:0; height: 1px; width: 70%;left:15%;}
+}
+@media(max-width:576px){
+    #demo{font-size: 18px; margin-top: 30px;}
+
+.tableParent::-webkit-scrollbar {  height: 6px; }
+   }
+@media(max-width:360px){
+    .searchBlock{max-width: 100%;}
+}
