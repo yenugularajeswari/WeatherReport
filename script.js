@@ -3,7 +3,7 @@ const apiKey = "91cb80435e51aa4064fe99b941012a0b";
 
 
 async function weatherInfo(city){
-    const res = await fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metrics&appid=' +apiKey)
+    const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metrics&appid=' +apiKey)
     const data = await res.json();
    // console.log("by city: ", data);
     if(data.cod == 200){
