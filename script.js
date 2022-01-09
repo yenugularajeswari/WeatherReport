@@ -96,8 +96,8 @@ function displayWeather(data){
     document.querySelector('.date').innerHTML=day +' ' + mon + ', ' + dayName ;
     document.querySelector('.tempMax').innerHTML = tempMax + '°';
     document.querySelector('.tempMin').innerHTML =  tempMin +'°';
-    document.querySelector('.wind').innerHTML = speed;
-    document.querySelector('.humidity').innerHTML = humidity;
+    document.querySelector('.wind').innerHTML = speed + '<span>km/h</span>';
+    document.querySelector('.humidity').innerHTML = humidity + '<span>%</span>';
     document.querySelector('.sunrise').innerHTML = sunrise.getHours()+ ' : ' + sunrise.getMinutes();
     document.querySelector('.sunset').innerHTML = sunset.getHours()+ ' : ' + sunset.getMinutes();
  }

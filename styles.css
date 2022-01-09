@@ -40,9 +40,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
     border-radius: 50%; margin-right: 15px;}
 .imgBg .icon{width: 160px;}
 .WeatherDetails{padding-top: 20px; padding-bottom: 0px; position: relative;}
-.WeatherDetails::before {    position: absolute; content: ''; left: 15px; top: 10%; background: rgba(0,0,0,0.1); width: 1px; height: 80%; border-radius: 5px;}
-.WeatherDetails .value{font-size: 40px;line-height: 1; font-weight: bold; text-align: center;}
-.WeatherDetails .text{ font-size: 24px; opacity: 0.65; text-align: center;margin-bottom: 20px;}
+.WeatherDetails .wrapper{display: grid;
+    grid-template-columns: repeat(3, 1fr);}
+.WeatherDetails .wrapper .cell{padding:5px 15px;}
+.WeatherDetails::before {    position: absolute; content: ''; left: 0px; top: 10%; background: rgba(0,0,0,0.1); width: 1px; height: 80%; border-radius: 5px;}
+.WeatherDetails .value{font-size: 40px;line-height: 1; font-weight: bold; }
+.WeatherDetails .value span{font-size: 30px;}
+.WeatherDetails .text{ font-size: 24px; opacity: 0.65; margin-bottom: 20px;}
 table{overflow: auto; max-width: 100%;border-collapse: inherit;}
 table td{font-size: 30px; line-height: 1.25; font-weight: 600; text-align: center;padding:10px 15px; background:rgba(0,0,0,0.1)}
 table td img{max-width: 100px;}
@@ -72,7 +76,8 @@ table td span{font-size: 26px; margin-left: 2px;}
     .imgBg .icon{width: 120px;}
     .city{font-size: 45px;}
     .date, .WeatherDetails .text{ font-size: 20px;}
-    .WeatherDetails .value{font-size: 28px;}
+    .WeatherDetails .value{font-size: 26px;}
+    .WeatherDetails .value span{font-size: 16px;}
     .temperature .desc{font-size: 22px;}
     .temperature .temp{font-size: 80px;}
     .temperature .temp::after{font-size: 60px;}
@@ -98,6 +103,7 @@ table td span{font-size: 26px; margin-left: 2px;}
     .date{text-align: center;margin-left: 0;}
     body{padding-bottom: 30px; }
     .WeatherDetails .value{font-size: 20px;}
+    .WeatherDetails .value span{font-size: 13px;}
     .WeatherDetails .text{font-size: 14px;}
     .city{font-size: 34px;}
     .date{font-size: 16px;}
@@ -105,6 +111,7 @@ table td span{font-size: 26px; margin-left: 2px;}
     .temperature .temp::after{font-size: 35px;}
     .desc{font-size: 14px; font-weight: 600;}
     .WeatherDetails{padding-top: 20px;margin-top: 20px;}
+    .WeatherDetails .value, .WeatherDetails .text{text-align: center;}
     .tableParent{margin-top: 00px;}
     .WeatherDetails::before{top:0; height: 1px; width: 70%;left:15%;}
 }
