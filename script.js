@@ -21,8 +21,13 @@ async function weatherInfo(city){
 
 function search(){
     let city= document.querySelector('.searchBar').value
+    if(city == ''){
+        document.querySelector('.errorMsg').innerHTML='Please enter city';
+    }
+    else{
     this.weatherInfo(city);
     }
+}
 
 function getLocation() {
   if (navigator.geolocation) {
